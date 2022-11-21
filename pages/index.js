@@ -9,7 +9,7 @@ export default function Home({ posts }) {
       <h1 className="text-4xl text-center">La Crypta</h1>
       <p className="text-center">
         Benvenuti nel portale dove si tratta l&apos;argomento crytovalute con
-        serenit&acute; e professionalit&acute;.
+        serenit&aacute; e professionalit&aacute;.
       </p>
 
       <div className="max-w-lg py-8 mx-auto space-x-3">
