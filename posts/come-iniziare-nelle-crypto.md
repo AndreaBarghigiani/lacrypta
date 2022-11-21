@@ -9,6 +9,6 @@ tags:
 
 Ciao da andrea
 
-# Questo è il mio primo articolo
+## Questo è il mio primo articolo
 
 E dovresti **veramente** leggerlo.
