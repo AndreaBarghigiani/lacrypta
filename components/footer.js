@@ -9,6 +9,7 @@ export default function Footer() {
           src="/images/logo.png"
           width="64"
           height="64"
+          alt="La Crypta logo"
         />
         <p>
           <span className="text-lg font-semibold">La Crypta</span>

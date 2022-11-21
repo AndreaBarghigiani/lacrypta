@@ -14,6 +14,7 @@ export default function Navbar() {
             src="/images/logo.png"
             width="24"
             height="24"
+            alt="La Crypta logo"
           />
           La Crypta
         </Link>
