@@ -2,12 +2,20 @@ import fs from "fs";
 import matter from "gray-matter";
 
 import PostsList from "../components/postsList";
+import Stats from "../components/stats";
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="py-6 hero bg-base-200 min-h-fit">
-        <div className="text-center hero-content">
+      <div
+        className="border shadow rounded-3xl hero bg-base-200 min-h-max border-base-300"
+        style={{
+          backgroundImage: `url('images/hero-geroglifici.png')`,
+          backgroundSize: `contain`,
+        }}
+      >
+        <div className="hero-overlay rounded-3xl bg-opacity-60"></div>
+        <div className="p-20 text-center shadow-2xl hero-content bg-gradient-to-r from-base-300 via-base-100 to-base-300">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">La Crypta</h1>
             <p className="py-6">
@@ -18,6 +26,8 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+
+      <Stats />
 
       <PostsList posts={posts} />
     </>
