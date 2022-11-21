@@ -1,10 +1,20 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <Link href="/" className="text-xl normal-case btn btn-ghost">
+        <Link
+          href="/"
+          className="flex items-center text-xl normal-case btn btn-ghost"
+        >
+          <Image
+            className="mr-2 rounded-full"
+            src="/images/logo.png"
+            width="24"
+            height="24"
+          />
           La Crypta
         </Link>
       </div>
