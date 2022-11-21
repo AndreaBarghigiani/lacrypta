@@ -4,7 +4,6 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 export default function PostPage({ frontmatter, content }) {
-  console.log(frontmatter);
   return (
     <div className="max-w-3xl mx-auto prose">
       <h1>{frontmatter.title}</h1>
