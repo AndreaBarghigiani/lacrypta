@@ -5,7 +5,9 @@ export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <main className="container py-8 mx-auto">{children}</main>
+      <main className="container flex flex-col py-8 mx-auto space-y-10">
+        {children}
+      </main>
       <Footer />
     </>
   );
