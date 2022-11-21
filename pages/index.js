@@ -1,31 +1,25 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { postDate, timestamp } from "../utils/date";
-import Link from "next/link";
+
+import PostsList from "../components/postsList";
 
 export default function Home({ posts }) {
   return (
     <>
-      <h1 className="text-4xl text-center">La Crypta</h1>
-      <p className="text-center">
-        Benvenuti nel portale dove si tratta l&apos;argomento crytovalute con
-        serenit&acute; e professionalit&acute;.
-      </p>
-
-      <div className="max-w-lg py-8 mx-auto space-x-3">
-        <h2 className="mb-3 text-2xl text-center">Ultimi articoli</h2>
-        {posts.map(({ slug, frontmatter }) => (
-          <div key={slug} className="py-3 border-b ">
-            <Link href={`/post/${slug}`}>
-              <h3 className="text-xl">{frontmatter.title}</h3>
-              <time dateTime={timestamp(frontmatter.date)}>
-                {postDate(frontmatter.date)}
-              </time>
-              <p>{frontmatter.excerpt}</p>
-            </Link>
+      <div className="py-6 hero bg-base-200 min-h-fit">
+        <div className="text-center hero-content">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">La Crypta</h1>
+            <p className="py-6">
+              Benvenuti nel portale dove si tratta l&apos;argomento crytovalute
+              con serenit&aacute; e professionalit&aacute;.
+            </p>
+            <button className="btn btn-primary">Leggi qualche articolo</button>
           </div>
-        ))}
+        </div>
       </div>
+
+      <PostsList posts={posts} />
     </>
   );
 }

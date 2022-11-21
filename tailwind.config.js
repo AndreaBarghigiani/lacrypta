@@ -7,5 +7,10 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  daisyui: {
+    styled: true,
+    themes: ["coffee"],
+    base: true,
+  },
 };
