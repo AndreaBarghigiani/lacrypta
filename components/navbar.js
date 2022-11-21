@@ -2,31 +2,26 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="bg-neutral-800">
-      <nav className="container py-2 mx-auto">
-        <ul className="flex justify-center space-x-6 text-lg">
+    <div className="navbar bg-base-100">
+      <div className="flex-1">
+        <Link href="/" className="text-xl normal-case btn btn-ghost">
+          La Crypta
+        </Link>
+      </div>
+
+      <nav className="flex-none">
+        <ul className="p-0 menu menu-horizontal">
           <li>
-            <NavLink href="/">Home</NavLink>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <NavLink href="/blog">Blog</NavLink>
+            <Link href="/blog">Blog</Link>
           </li>
           <li>
-            <NavLink href="/about">About</NavLink>
+            <Link href="/about">About</Link>
           </li>
         </ul>
       </nav>
     </div>
   );
 }
-
-const NavLink = ({ href, children }) => {
-  return (
-    <Link
-      className="hover:text-gray-300 hover:underline text-yellow-50"
-      href={href}
-    >
-      {children}
-    </Link>
-  );
-};
