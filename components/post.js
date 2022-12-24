@@ -11,9 +11,11 @@ export default function Post({ slug, frontmatter }) {
         <Link href={`/post/${slug}`}>
           <h3 className="card-title">{frontmatter.title}</h3>
         </Link>
+
         <time dateTime={timestamp(frontmatter.date)}>
           {postDate(frontmatter.date)}
         </time>
+
         <p>{frontmatter.excerpt}</p>
 
         <div className="justify-start card-actions">

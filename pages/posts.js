@@ -8,9 +8,9 @@ export default function Posts({ posts }) {
     <>
       <PostsList posts={posts}>
         <p className="my-4">
-          Questa è la collezione di articoli che abbiamo pubblicato nel tempo,
-          non esitare a condividerli o a farci sapere che ne pensi all'interno
-          del nostro server Discord.
+          Questa &egrave; la collezione di articoli che abbiamo pubblicato nel
+          tempo, non esitare a condividerli o a farci sapere che ne pensi
+          all&lsquo;interno del nostro server Discord.
         </p>
       </PostsList>
     </>
