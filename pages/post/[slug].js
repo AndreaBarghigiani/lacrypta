@@ -1,14 +1,19 @@
 import fs from "fs";
 import matter from "gray-matter";
+import { NextSeo } from "next-seo";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 export default function PostPage({ frontmatter, content }) {
   return (
-    <div className="max-w-3xl mx-auto prose-lg">
-      <h1>{frontmatter.title}</h1>
-      <MDXRemote {...content} />
-    </div>
+    <>
+      <NextSeo title={frontmatter.title} description={frontmatter.excerpt} />
+
+      <div className="max-w-3xl mx-auto prose-lg">
+        <h1>{frontmatter.title}</h1>
+        <MDXRemote {...content} />
+      </div>
+    </>
   );
 }
 
