@@ -4,6 +4,8 @@ import { NextSeo } from "next-seo";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
+import Disclamer from "../../components/disclamer";
+
 export default function PostPage({ frontmatter, content }) {
   return (
     <>
@@ -11,6 +13,9 @@ export default function PostPage({ frontmatter, content }) {
 
       <div className="max-w-3xl mx-auto prose-lg">
         <h1>{frontmatter.title}</h1>
+
+        <Disclamer />
+
         <MDXRemote {...content} />
       </div>
     </>
