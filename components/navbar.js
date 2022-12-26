@@ -29,6 +29,9 @@ export default function Navbar() {
             <Link href="/posts">Blog</Link>
           </li>
           <li>
+            <Link href="/disclamer">NFA &amp; DYOR</Link>
+          </li>
+          <li>
             <Link href="/about">About</Link>
           </li>
         </ul>
