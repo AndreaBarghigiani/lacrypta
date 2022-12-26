@@ -2,10 +2,16 @@ import fs from "fs";
 import matter from "gray-matter";
 
 import PostsList from "../components/postsList";
+import { NextSeo } from "next-seo";
 
 export default function Posts({ posts }) {
   return (
     <>
+      <NextSeo
+        title="I nostri articoli"
+        description="La Crypta ti tiene aggiornato con i suoi articoli su ultimi progetti, deep dive e news sul mondo crypto."
+      />
+
       <PostsList posts={posts}>
         <p className="my-4">
           Questa &egrave; la collezione di articoli che abbiamo pubblicato nel
