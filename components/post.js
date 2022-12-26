@@ -5,7 +5,7 @@ export default function Post({ slug, frontmatter }) {
   return (
     <div
       key={slug}
-      className="my-6 border shadow-xl card bg-base-100 border-base-content"
+      className="my-6 border shadow-xl card bg-base-100 border-base-content border-opacity-30"
     >
       <div className="card-body">
         <Link href={`/post/${slug}`}>
