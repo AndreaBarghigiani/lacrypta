@@ -26,4 +26,3 @@ export default function ProjectButtons({ links }) {
     </div>
   );
 }
-Ultima Tranche Barghigiani-DeGiovanni
