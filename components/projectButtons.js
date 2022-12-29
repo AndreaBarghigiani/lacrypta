@@ -7,6 +7,7 @@ export default function ProjectButtons({ links }) {
     <div className="btn-group btn-group-vertical">
       {keys.map((key) => (
         <a
+          key={key}
           className={classnames({
             btn: true,
             "bg-indigo-700": key === "discord",
