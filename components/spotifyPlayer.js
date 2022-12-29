@@ -1,6 +1,4 @@
-export default function SpotifyPlayer({ link }) {
-  const id = link.slice(33, 55);
-  console.log(link, id);
+export default function SpotifyPlayer({ id }) {
   const src = `https://open.spotify.com/embed/episode/${id}?&theme=0`;
   return (
     <iframe
@@ -9,7 +7,7 @@ export default function SpotifyPlayer({ link }) {
       height="352"
       frameBorder="0"
       allowfullscreen=""
-      className="overflow-hidden rounded-2xl"
+      className="max-w-2xl mx-auto overflow-hidden rounded-2xl"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy"
     ></iframe>

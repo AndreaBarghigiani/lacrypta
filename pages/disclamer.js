@@ -3,9 +3,6 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
-import PostsList from "../components/postsList";
-import { NextSeo } from "next-seo";
-
 export default function Disclamer({ content }) {
   return (
     <>
