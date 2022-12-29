@@ -2,8 +2,6 @@ import { getShow, getEpisode } from "../../utils/spotify";
 import SpotifyPlayer from "../../components/spotifyPlayer";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote } from "next-mdx-remote";
 
 export default function PodcastPage({ title, htmlDesc, desc, id }) {
   return (
@@ -29,6 +27,7 @@ export default function PodcastPage({ title, htmlDesc, desc, id }) {
           </button>
         </Link>
       </header>
+
       <div className="mx-auto prose-lg">
         <h1>{title}</h1>
         <SpotifyPlayer id={id} />

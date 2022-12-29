@@ -41,7 +41,8 @@ export async function getStaticProps() {
       name: episode.name,
       slug: slug(episode.name),
       image: episode.images[0].url,
-      desc: { __html: episode.html_description },
+      htmlDesc: { __html: episode.html_description },
+      desc: episode.description,
       id: episode.id.toString(),
     };
   });
