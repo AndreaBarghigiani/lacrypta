@@ -9,8 +9,8 @@ export default function PodcastPage({ title, htmlDesc, desc, id }) {
     <>
       <div className="mx-auto prose-lg">
         <h1>{title}</h1>
-        <p dangerouslySetInnerHTML={htmlDesc} />
         <SpotifyPlayer id={id} />
+        <p dangerouslySetInnerHTML={htmlDesc} />
       </div>
     </>
   );
