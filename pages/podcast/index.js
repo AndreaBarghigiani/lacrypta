@@ -24,7 +24,11 @@ export default function Podcast({ eps }) {
 
       <div className="flex flex-wrap justify-center gap-4">
         {eps.map((episode) => (
-          <EpisodeCard episode={episode} className="flex-auto" />
+          <EpisodeCard
+            key={episode.id}
+            episode={episode}
+            className="flex-auto"
+          />
         ))}
       </div>
     </>
