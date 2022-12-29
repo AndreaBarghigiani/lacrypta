@@ -19,6 +19,7 @@ export default function ProjectButtons({ links }) {
             "text-black": key === "whitepaper",
           })}
           target="_blank"
+          rel="noreferrer"
           href={links[key]}
         >
           {key}
