@@ -33,7 +33,6 @@ export default function Podcast({ eps }) {
 
 export async function getStaticProps() {
   const response = await getShow();
-  // console.log("response:", response);
   const data = await response.json();
 
   const eps = data.items.map((episode) => {
