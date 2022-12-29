@@ -28,10 +28,11 @@ const getAccessToken = async () => {
   return response.json();
 };
 
-export const getShow = async () => {
+export const getShow = async (limit = 0) => {
   const { access_token } = await getAccessToken();
+  const fetchEpisodes = limit > 0 ? `${GET_SHOW}?limit=${limit}` : GET_SHOW;
 
-  return fetch(GET_SHOW, {
+  return fetch(fetchEpisodes, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
