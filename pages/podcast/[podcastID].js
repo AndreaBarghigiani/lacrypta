@@ -1,5 +1,6 @@
 import { getShow, getEpisode } from "../../utils/spotify";
 import SpotifyPlayer from "../../components/spotifyPlayer";
+import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
@@ -7,6 +8,27 @@ import { MDXRemote } from "next-mdx-remote";
 export default function PodcastPage({ title, htmlDesc, desc, id }) {
   return (
     <>
+      <header>
+        <Link href="/podcast">
+          <button className="gap-2 btn btn-outline">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+            Indietro
+          </button>
+        </Link>
+      </header>
       <div className="mx-auto prose-lg">
         <h1>{title}</h1>
         <SpotifyPlayer id={id} />
