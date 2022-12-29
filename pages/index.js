@@ -1,10 +1,13 @@
 import fs from "fs";
 import matter from "gray-matter";
+import slug from "slug";
+import { getShow } from "../utils/spotify";
 
+import EpisodeList from "../components/episodeList";
 import PostsList from "../components/postsList";
 import Stats from "../components/stats";
 
-export default function Home({ posts }) {
+export default function Home({ posts, eps }) {
   return (
     <>
       <div
@@ -30,11 +33,31 @@ export default function Home({ posts }) {
       <Stats />
 
       <PostsList posts={posts} />
+
+      <EpisodeList episodes={eps}>
+        <p>
+          Ecco gli ultimi episodi che abbiamo caricato all&apos;interno del
+          podcast che manteniamo per tutta la community.
+        </p>
+      </EpisodeList>
     </>
   );
 }
 
 export async function getStaticProps() {
+  const episodes = await getShow(4);
+  const data = await episodes.json();
+
+  const eps = data.items.map((episode) => ({
+    name: episode.name,
+    slug: slug(episode.name),
+    image: episode.images[0].url,
+    htmlDesc: { __html: episode.html_description },
+    desc: episode.description,
+    id: episode.id.toString(),
+  }));
+  console.log("eps:", eps);
+  // const eps = [{ name: "Andrea" }, { name: "Paola" }];
   const files = fs.readdirSync("posts");
 
   const posts = files.map((fileName) => {
@@ -51,6 +74,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
+      eps,
     },
   };
 }
