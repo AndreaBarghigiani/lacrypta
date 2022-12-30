@@ -13,7 +13,7 @@ export default function Posts({ posts }) {
       />
 
       <PostsList posts={posts}>
-        <p className="my-4">
+        <p className="my-4 text-center">
           Questa &egrave; la collezione di articoli che abbiamo pubblicato nel
           tempo, non esitare a condividerli o a farci sapere che ne pensi
           all&lsquo;interno del nostro server Discord.

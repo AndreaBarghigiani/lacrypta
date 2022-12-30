@@ -1,7 +1,7 @@
 import Link from "next/link";
 import EpisodeCard from "./episodeCard";
 
-export default function PostsList({ episodes, children, btn }) {
+export default function EpisodeList({ episodes, children, btn }) {
   return (
     <div className="mx-auto">
       <header className="mb-4 prose-xl text-center">
@@ -19,7 +19,7 @@ export default function PostsList({ episodes, children, btn }) {
 
       {btn ? (
         <footer className="my-8 text-center">
-          <Link href="/podcast" className="btn btn-secondary btn-lg">
+          <Link href="/podcast" className="btn btn-primary btn-lg btn-outline">
             Scoprili tutti
           </Link>
         </footer>
@@ -28,6 +28,6 @@ export default function PostsList({ episodes, children, btn }) {
   );
 }
 
-PostsList.defaultProps = {
+EpisodeList.defaultProps = {
   btn: true,
 };
