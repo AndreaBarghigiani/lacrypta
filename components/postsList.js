@@ -23,7 +23,7 @@ export default function PostsList({ posts, children, id, limit, sorted }) {
 
       {posts.length > limit && limit > 0 ? (
         <footer className="my-8 text-center">
-          <Link href="/posts" className="btn btn-primary btn-lg">
+          <Link href="/posts" className="btn btn-primary btn-lg btn-outline">
             Leggili tutti
           </Link>
         </footer>

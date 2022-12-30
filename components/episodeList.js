@@ -19,7 +19,7 @@ export default function EpisodeList({ episodes, children, btn }) {
 
       {btn ? (
         <footer className="my-8 text-center">
-          <Link href="/podcast" className="btn btn-primary btn-lg">
+          <Link href="/podcast" className="btn btn-primary btn-lg btn-outline">
             Scoprili tutti
           </Link>
         </footer>
