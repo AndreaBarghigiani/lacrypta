@@ -34,7 +34,7 @@ export default function Home({ posts, eps }) {
         </div>
       </div>
 
-      <PostsList id="posts" posts={posts} limit={1} />
+      <PostsList id="posts" posts={posts} limit={3} />
 
       <EpisodeList episodes={eps}>
         <p>
