@@ -21,7 +21,7 @@ export default function PostsList({ posts, children, id, limit, sorted }) {
         <Post key={slug} slug={slug} frontmatter={frontmatter} />
       ))}
 
-      {posts.length > limit ? (
+      {posts.length > limit && limit > 0 ? (
         <footer className="my-8 text-center">
           <Link href="/posts" className="btn btn-primary btn-lg">
             Leggili tutti
