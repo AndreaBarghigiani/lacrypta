@@ -19,7 +19,7 @@ export default function episodeCard({ episode }) {
           href={`podcast/${episode.id}`}
           className="justify-end card-actions"
         >
-          <button className="btn btn-primary">Ascolta</button>
+          <button className="btn btn-secondary">Ascolta</button>
         </Link>
       </div>
     </div>
