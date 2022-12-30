@@ -2,6 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import slug from "slug";
 import { getShow } from "../utils/spotify";
+import Link from "next/link";
 
 import EpisodeList from "../components/episodeList";
 import PostsList from "../components/postsList";
@@ -25,14 +26,16 @@ export default function Home({ posts, eps }) {
               Benvenuti nel portale dove si tratta l&apos;argomento crytovalute
               con serenit&aacute; e professionalit&aacute;.
             </p>
-            <button className="btn btn-primary">Leggi qualche articolo</button>
+            <Link href="#posts" className="btn btn-primary">
+              Leggi qualche articolo
+            </Link>
           </div>
         </div>
       </div>
 
       <Stats />
 
-      <PostsList posts={posts} />
+      <PostsList id="posts" posts={posts} />
 
       <EpisodeList episodes={eps}>
         <p>
