@@ -14,8 +14,7 @@ export default function episodeCard({ episode }) {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{episode.name}</h2>
-        <p>{truncate(episode.desc, 180)}</p>
+        <h2 className="mb-auto text-2xl card-title">{episode.name}</h2>
         <Link
           href={`podcast/${episode.id}`}
           className="justify-end card-actions"
