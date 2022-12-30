@@ -2,6 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import slug from "slug";
 import { getShow } from "../utils/spotify";
+
 import Link from "next/link";
 
 import EpisodeList from "../components/episodeList";
@@ -33,9 +34,7 @@ export default function Home({ posts, eps }) {
         </div>
       </div>
 
-      <Stats />
-
-      <PostsList id="posts" posts={posts} />
+      <PostsList id="posts" posts={posts} limit={1} />
 
       <EpisodeList episodes={eps}>
         <p>
@@ -48,9 +47,9 @@ export default function Home({ posts, eps }) {
 }
 
 export async function getStaticProps() {
+  // Retrieve podcast episodes
   const episodes = await getShow(4);
   const data = await episodes.json();
-
   const eps = data.items.map((episode) => ({
     name: episode.name,
     slug: slug(episode.name),
@@ -59,10 +58,9 @@ export async function getStaticProps() {
     desc: episode.description,
     id: episode.id.toString(),
   }));
-  console.log("eps:", eps);
-  // const eps = [{ name: "Andrea" }, { name: "Paola" }];
-  const files = fs.readdirSync("posts");
 
+  // Retrieve articles
+  const files = fs.readdirSync("posts");
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".mdx", "");
     const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
