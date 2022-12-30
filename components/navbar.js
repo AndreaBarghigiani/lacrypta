@@ -37,6 +37,14 @@ export default function Navbar() {
           <li>
             <Link href="/about">About</Link>
           </li>
+          <li>
+            <Link
+              href="https://discord.gg/8RuJQGT8Rb"
+              className="flex items-center"
+            >
+              <img src="https://discordapp.com/api/guilds/946525172578529310/widget.png?style=shield" />
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
