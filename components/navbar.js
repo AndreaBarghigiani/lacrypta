@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1">
+    <div className=" navbar bg-base-100">
+      <div>
         <Link
           href="/"
           className="flex items-center text-xl normal-case btn btn-ghost"
@@ -20,7 +20,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <nav className="flex-none">
+      <nav className="hidden ml-auto sm:block">
         <ul className="p-0 menu menu-horizontal">
           <li>
             <Link href="/">Home</Link>
