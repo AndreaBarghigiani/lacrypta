@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function episodeCard({ episode }) {
   return (
-    <div className="border shadow-xl card w-96 bg-base-100 image-full border-base-content border-opacity-30">
+    <div className="border shadow-xl shrink-0 lg:basis-1/5 card w-96 bg-base-100 image-full border-base-content border-opacity-30">
       <figure>
         <Image
           src={episode.image}
