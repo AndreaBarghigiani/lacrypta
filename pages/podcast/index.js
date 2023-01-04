@@ -1,7 +1,7 @@
 import slug from "slug";
 import { getShow } from "../../utils/spotify";
 import { NextSeo } from "next-seo";
-import EpisodeCard from "../../components/episodeCard";
+import EpisodeList from "../../components/episodeList";
 
 export default function Podcast({ eps }) {
   // console.log("eps", eps);
@@ -22,15 +22,7 @@ export default function Podcast({ eps }) {
         </p>
       </header>
 
-      <div className="flex flex-wrap justify-center gap-4">
-        {eps.map((episode) => (
-          <EpisodeCard
-            key={episode.id}
-            episode={episode}
-            className="flex-auto"
-          />
-        ))}
-      </div>
+      <EpisodeList episodes={eps} />
     </>
   );
 }
