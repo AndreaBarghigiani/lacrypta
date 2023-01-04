@@ -1,6 +1,10 @@
+import { days } from "../utils/date";
 import Image from "next/image";
 
 export default function Footer() {
+  const foundation = new Date(`02/24/2022`);
+  const today = new Date();
+
   return (
     <footer className="p-10 footer bg-base-200 text-base-content sticky top-[100vh]">
       <div>
@@ -14,7 +18,7 @@ export default function Footer() {
         <p>
           <span className="text-lg font-semibold">La Crypta</span>
           <br />
-          Consigli cripto da 197 giorni
+          Consigli cripto da {days(foundation, today)} giorni
         </p>
       </div>
       <div>

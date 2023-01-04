@@ -12,3 +12,9 @@ export const postDate = (date) => {
 };
 
 export const timestamp = (date) => new Date(date).toISOString();
+
+export const days = (before, after) => {
+  const diff = after.getTime() - before.getTime();
+  const total = Math.ceil(diff / (1000 * 3600 * 24));
+  return total;
+};
