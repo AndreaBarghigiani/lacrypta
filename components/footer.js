@@ -1,4 +1,5 @@
 import { days } from "../utils/date";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
@@ -21,25 +22,34 @@ export default function Footer() {
           Consigli cripto da {days(foundation, today)} giorni
         </p>
       </div>
-      <div>
-        <span className="footer-title">Services</span>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+
+      <div className="md:ml-auto">
+        <span className="footer-title">Community</span>
+        <Link className="link link-hover" href="https://discord.gg/8RuJQGT8Rb">
+          Discord
+        </Link>
+        <Link className="link link-hover" href="https://twitter.com/La__Crypta">
+          Twitter
+        </Link>
+        <Link
+          className="link link-hover"
+          href="https://www.youtube.com/@lacrypta"
+        >
+          YouTube
+        </Link>
       </div>
-      <div>
-        <span className="footer-title">Company</span>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </div>
-      <div>
-        <span className="footer-title">Legal</span>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
+
+      <div className="md:ml-auto">
+        <span className="footer-title">Contenuti</span>
+        <Link className="link link-hover" href="/posts">
+          Articoli
+        </Link>
+        <Link className="link link-hover" href="/podcast">
+          Podcast
+        </Link>
+        <Link className="link link-hover" href="/disclamer">
+          Disclamer
+        </Link>
       </div>
     </footer>
   );
