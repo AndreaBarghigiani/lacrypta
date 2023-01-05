@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
         chains={chains}
         modalSize="compact"
         theme={darkTheme({
-          accentColor: "#263F40",
+          accentColor: "#DC944C",
         })}
       >
         <Layout>
