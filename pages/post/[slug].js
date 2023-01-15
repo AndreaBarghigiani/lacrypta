@@ -11,7 +11,7 @@ export default function PostPage({ frontmatter, content }) {
     <>
       <NextSeo title={frontmatter.title} description={frontmatter.excerpt} />
 
-      <article className="max-w-3xl mx-auto prose-lg">
+      <article className="max-w-3xl mx-auto prose prose-xl">
         <h1>{frontmatter.title}</h1>
 
         <Disclamer />
